@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Who</title>
+
+    <!-- BULMA -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="game.js" defer></script>
+</head>
+
+<body class="has-background-light">
+
+    <section class="hero is-link is-small">
+        <div class="hero-body has-text-centered">
+            <p class="title">Guess Who</p>
+            <p class="subtitle">Ask questions out loud • Click cards to flip</p>
+        </div>
+    </section>
+
+    <div class="container mt-5">
+
+        <!-- Controls -->
+        <div class="box gw-controls">
+            <div class="columns is-multiline">
+
+                <div class="column is-3">
+                    <label class="label">Number of Cards</label>
+                    <input id="cardCount" class="input" type="number" min="2" max="120" value="24">
+                </div>
+
+                <div class="column is-9">
+                    <label class="label">Names (comma or newline separated)</label>
+                    <textarea id="namesInput" class="textarea" rows="4"
+                        placeholder="Alex, Maria, John, Sophie"></textarea>
+                </div>
+
+                <div class="column is-12">
+                    <div class="buttons is-centered">
+                        <button id="buildBtn" class="button is-primary" type="button">Build Board</button>
+                        <button id="resetFlipsBtn" class="button is-warning" type="button">Reset Flips</button>
+                        <button id="pickSecretBtn" class="button is-dark" type="button">Pick Secret</button>
+                    </div>
+                </div>
+
+                <div class="column is-12">
+                    <div class="gw-statusRow">
+                        <p id="status" class="gw-pill"></p>
+                        <p id="secret" class="gw-pill gw-pill--secret"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Board -->
+        <div id="board" class="gw-board"></div>
+    </div>
+
+</body>
+
+</html>
