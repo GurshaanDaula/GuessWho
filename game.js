@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --------- Default names + start ----------
     namesInputEl.value =
-        "miranda, sanya, alaa, ritish, jerrick, liz, carter, adam, maya, joban, sarah, matt, justin, owen, simrit, barb, kevin, dino, sadiq, scarlet, kyla, isaac, murray";
+        "miranda, sanya, alaa, ritish, jerrick, liz, carter, adam, maya, joban, sarah, matt, justin, owen, simrit, kevin, dino, sadiq, kyla, isaac, murray";
 
     buildBoard();
 });
